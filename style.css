@@ -1,0 +1,147 @@
+/****************** IMPORT FONTS ****************/
+/****************** IMPORT FONTS ****************/
+/****************** IMPORT FONTS ****************/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+/****************** ROOT COLORS ****************/
+/****************** ROOT COLORS ****************/
+/****************** ROOT COLORS ****************/
+:root {
+  /* ### Primary */
+
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* ### Neutral */
+  /* paragraphs */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+/****************** DISABLE BOX MODEL ****************/
+/****************** DISABLE BOX MODEL ****************/
+/****************** DISABLE BOX MODEL ****************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/****************** BASE STYLES ****************/
+/****************** BASE STYLES ****************/
+/****************** BASE STYLES ****************/
+html {
+  font-size: 10px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/****************** MAIN STYLES ****************/
+/****************** MAIN STYLES ****************/
+/****************** MAIN STYLES ****************/
+body {
+  font-size: 1.5rem;
+  width: 144rem;
+  background-color: var(--Very-light-gray);
+}
+.container {
+  width: 90rem;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+}
+section {
+  padding: 4rem;
+}
+img {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.first-section {
+  background-color: var(--Bright-orange);
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+.second-section {
+  background-color: var(--Dark-cyan);
+}
+.third-section {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+.title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+.description {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: var(--Transparent-white);
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  margin-bottom: 7rem;
+}
+
+/****************** BUTTON AND HOVER STATES ****************/
+/****************** BUTTON AND HOVER STATES ****************/
+/****************** BUTTON AND HOVER STATES ****************/
+.cta {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--Very-light-gray);
+  border: none;
+  border-radius: 2rem;
+  padding: 1.2rem 2.4rem;
+}
+.cta:hover {
+  cursor: pointer;
+  outline: 0.3rem solid var(--Transparent-white);
+}
+.sedans {
+  color: var(--Bright-orange);
+}
+.sedans:hover {
+  background-color: var(--Bright-orange);
+  color: var(--Transparent-white);
+}
+.suvs {
+  color: var(--Dark-cyan);
+}
+
+.suvs:hover {
+  color: var(--Transparent-white);
+  background-color: var(--Dark-cyan);
+}
+
+.luxury {
+  color: var(--Very-dark-cyan);
+}
+.luxury:hover {
+  color: var(--Transparent-white);
+  background-color: var(--Very-dark-cyan);
+}
+
+/****************** MEDIA QUERIES ****************/
+/****************** MEDIA QUERIES ****************/
+/****************** MEDIA QUERIES ****************/
+@media screen and (max-width: 600px) {
+  body {
+    width: 375px;
+  }
+  .container {
+    display: grid;
+    width: 350px;
+    grid-template-columns: 350px;
+    margin: 5rem auto;
+  }
+  .first-section {
+    border-radius: 1.2rem 1.2rem 0 0;
+  }
+  .third-section {
+    border-radius: 0 0 1.2rem 1.2rem;
+  }
+}
